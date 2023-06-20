@@ -16,8 +16,8 @@ pipeline {
         RELEASE_REPO = "vprofile-maven-central"
 	    NEXUS_GRP_REPO = "vprofile-maven-group"
         NEXUS_LOGIN = "nexuslogin"
-        SONARSERVER = 'sonarserver'
-        SONARSCANNER = 'sonarscanner'
+        SONARSERVER = 'SonarServer'
+        SONARSCANNER = 'SonarScanner'
         
     }
 	
