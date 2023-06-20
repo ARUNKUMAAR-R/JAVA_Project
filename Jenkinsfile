@@ -1,12 +1,11 @@
 pipeline {
     
 	agent any
-/*	
-	tools {
-        maven "maven3"
-        java "jdk8"
+    tools {
+        maven "MAVEN3"
+        jdk "JAVA_HOME"
     }
-*/	
+	
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
@@ -18,10 +17,14 @@ pipeline {
     }
 	
     stages {
-        steps{
+        stage('build'){
+            steps{
+                sh 'mvn -s settings.xml -DskipTests install'
+            }
+        }
 
         }
     }
 
 
-}
+
