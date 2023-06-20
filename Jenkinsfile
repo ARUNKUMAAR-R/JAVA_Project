@@ -31,22 +31,22 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
-            
+        }            
 
         stage('Test'){
             steps {
-                sh 'mvn test'
+                sh 'mvn -s setting.xml test'
             }
         }
 
         stage('checkStyle'){
             steps {
-                sh 'mvn checkstyle:checkstyle'
+                sh 'mvn -s settings.xml checkstyle:checkstyle'
             }
         }
 
     }
 }
-}
+
 
 
