@@ -25,7 +25,7 @@ pipeline {
         SONARSCANNER = 'SonarScanner'
         
     }
-	""]]
+	
     stages {
         stage('build'){
             steps {
