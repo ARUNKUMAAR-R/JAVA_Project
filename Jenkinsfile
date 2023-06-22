@@ -83,7 +83,7 @@ pipeline {
                   repository: "${RELEASE_REPO}",
                   credentialsId: "${NEXUS_LOGIN}",
                   artifacts: [
-                    [artifactId: 'vprofile',
+                    [artifactId: 'vprofile-tmp',
                      classifier: '',
                      file: 'target/vprofile-v2.war',
                      type: 'war']
