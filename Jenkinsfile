@@ -7,20 +7,20 @@ pipeline {
     
 	agent any
     tools {
-        maven "MAVEN3"
-        jdk "JAVA_HOME"
+        maven "maven3"
+        jdk "openjdk11"
     }
 	
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUSPORT = "8081"
-        NEXUSIP = "172.31.7.0"
-        SNAP_REPO = 'vprofile-maven-snap'
+        NEXUSIP = "172.31.7.124"
+        SNAP_REPO = 'vprofile-maven-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin'
-        RELEASE_REPO = "vprofile-maven-central"
+        RELEASE_REPO = "vprofile-maven-release"
 	    NEXUS_GRP_REPO = "vprofile-maven-group"
-        NEXUS_LOGIN = "nexuslogin"
+        NEXUS_LOGIN = "nexus-login"
         SONARSERVER = 'SonarServer'
         SONARSCANNER = 'SonarScanner'
         
