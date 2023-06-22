@@ -83,7 +83,7 @@ pipeline {
                   repository: "${RELEASE_REPO}",
                   credentialsId: "${NEXUS_LOGIN}",
                   artifacts: [
-                    [artifactId: 'vprofile-tmp',
+                    [artifactId: 'vprofile',
                      classifier: '',
                      file: 'target/vprofile-v2.war',
                      type: 'war']
@@ -108,7 +108,7 @@ pipeline {
 			        groupid: "QA",
 			        time: "${env.BUILD_TIMESTAMP}",
 			        build: "${env.BUILD_ID}",
-                    artifactid: "vproapp-tmp",
+                    artifactid: "vproapp",
 			        vprofile_version: "vproapp-${env.BUILD_ID}-${env.BUILD_TIMESTAMP}.war"
                 ]
              ])
