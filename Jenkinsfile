@@ -103,7 +103,7 @@ pipeline {
                 extraVars   : [
                    	USER: "admin",
                     PASS: "${NEXUSPASS}",
-			        nexusip: "172.31.5.4",
+			        nexusip: "172.31.7.124",
 			        reponame: "vprofile-maven-release",
 			        groupid: "QA",
 			        time: "${env.BUILD_TIMESTAMP}",
