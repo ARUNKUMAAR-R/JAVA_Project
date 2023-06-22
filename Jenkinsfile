@@ -11,7 +11,7 @@ pipeline {
         jdk "openjdk11"
     }
 	
-    environment {
+    #environment {
         NEXUS_VERSION = "nexus3"
         NEXUSPORT = "8081"
         NEXUSIP = "172.31.7.124"
