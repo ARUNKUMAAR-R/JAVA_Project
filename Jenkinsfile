@@ -20,7 +20,7 @@ pipeline {
         NEXUS_PASS = 'admin'
         RELEASE_REPO = "vprofile-maven-release"
 	    NEXUS_GRP_REPO = "vprofile-maven-group"
-        NEXUS_LOGIN = "nexus-login"
+        NEXUS_LOGIN = "nexuslogin"
         SONARSERVER = 'SonarServer'
         SONARSCANNER = 'SonarScanner'
         
