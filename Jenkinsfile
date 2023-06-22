@@ -23,6 +23,7 @@ pipeline {
         NEXUS_LOGIN = "nexuslogin"
         SONARSERVER = 'SonarServer'
         SONARSCANNER = 'SonarScanner'
+        NEXUSPASS = credentials('nexuspass')
         
     }
 	
@@ -103,7 +104,7 @@ pipeline {
                    	USER: "admin",
                     PASS: "${NEXUSPASS}",
 			        nexusip: "172.31.5.4",
-			        reponame: "vprofile-release",
+			        reponame: "vprofile-maven-release",
 			        groupid: "QA",
 			        time: "${env.BUILD_TIMESTAMP}",
 			        build: "${env.BUILD_ID}",
