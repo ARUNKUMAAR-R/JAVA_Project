@@ -104,7 +104,7 @@ pipeline {
                    	USER: "admin",
                     PASS: "${NEXUSPASS}",
 			        nexusip: "172.31.7.124",
-			        reponame: "vprofile-maven-release",
+			        reponame: "vprofile-release",
 			        groupid: "QA",
 			        time: "${env.BUILD_TIMESTAMP}",
 			        build: "${env.BUILD_ID}",
