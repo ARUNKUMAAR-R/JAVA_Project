@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  tetra-db:
+    build: 
+      context: ./Docker-files/db
+      image: arunrascall/tetra-db
+      container_name: tetra-db
+      ports:
+        - "3306:3306"
+      volumes:
+        - tetra-db-data:/var/lib/mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=vprodpass
+
+  tetra-cache01:
+    image: memcached
+    ports:
+      - "11211:11211"
+
+  tetra-mq:
+    image: rabbitmq
+    ports:
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+
+  tetra-app:
+    build: 
+      context: ./Docker-files/app
+    image:  arunrascall/tetra-app
+    container_name: tetra-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - tetra-app-data:/usr/local/tomcat/webapps
+
+
+  tetra-nginx:
+    build: 
+      context: ./Docker-files/app
+    image:  arunrascall/tetra-nginx
+    container_name: tetra-nginx
+    ports:
+      - "80:80"
+    
+volumes:
+  tetra-db-data: {}
+  tetra-app-data: {} 
+    
