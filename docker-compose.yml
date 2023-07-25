@@ -3,14 +3,14 @@ services:
   tetra-db:
     build: 
       context: ./Docker-files/db
-      image: arunrascall/tetra-db
-      container_name: tetra-db
-      ports:
-        - "3306:3306"
-      volumes:
-        - tetra-db-data:/var/lib/mysql
-      environment:
-        - MYSQL_ROOT_PASSWORD=vprodpass
+    image: arunrascall/tetra-db
+    container_name: tetra-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - tetra-db-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=vprodpass
 
   tetra-cache01:
     image: memcached
