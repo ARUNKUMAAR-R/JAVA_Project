@@ -38,7 +38,7 @@ services:
 
   tetra-nginx:
     build: 
-      context: ./Docker-files/app
+      context: ./Docker-files/web
     image:  arunrascall/tetra-nginx
     container_name: tetra-nginx
     ports:
